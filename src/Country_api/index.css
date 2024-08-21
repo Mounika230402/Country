@@ -1,4 +1,9 @@
 /* CountryComponent.css */
+/* .MainDiv{
+  background-image: url('./background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 .input-box {
     width: 50vw;
     margin: 3vh 25vw;
@@ -45,8 +50,8 @@
   }
   
   .card-img-top {
-height:180px;
-object-fit: cover;
+    height:180px;
+    object-fit: cover;
   }
   
   .card-body {

@@ -35,13 +35,14 @@ const CountryComponent = (props) => {
   return (
     <>
     <NavBar className="navbar"/>
+    <div className="MainDiv">
     <input type="text" value={country} onChange={CountryHandler} placeholder="Enter the country" className="input-box"/>
     <div className="card-container">
       {
         offical.length>0 ?
         offical.map((each,index)=>{
           return(
-            <CardComponent country={each.name.official} flag={each.flags.png} population={each.population} capital={each.capital} key={index} region={each.region} />
+            <CardComponent country={each.name.official} flag={each.flags.png} population={each.population} id={index} capital={each.capital} key={index} region={each.region}  />
            
           )
         }):
@@ -53,6 +54,7 @@ const CountryComponent = (props) => {
         })
       }
     
+    </div>
     </div>
     </>
   )

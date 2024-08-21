@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import {signInWithGooglePopup} from '../firebase'
 import image from './google_icon.png'
 import "./login.css"
+import firebase from 'firebase/compat/app';
 const SignIn = () => {
     const navigate=useNavigate()
     const logGoogleUser = async () => {
@@ -16,3 +17,14 @@ const SignIn = () => {
         )
     }
     export default SignIn;
+
+
+    export function googleSignout() {
+        firebase.auth().signOut()
+         
+        .then(function() {
+           console.log('Signout Succesfull')
+        }, function(error) {
+           console.log('Signout Failed')  
+        });
+      }
