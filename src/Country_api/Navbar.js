@@ -16,7 +16,7 @@ function NavBar(prop) {
   return (
     <Navbar bg="primary" data-bs-theme="dark">
     <Container>
-      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      <Navbar.Brand><Link to={"/Country"} style={linkStyle}>Navbar</Link></Navbar.Brand>
       <Nav className="me-auto">
         <Link to={"/Country"} style={linkStyle}>Home</Link>
         <Link to={"/currencyconverter"} style={linkStyle}>CurrencyConverter</Link>
